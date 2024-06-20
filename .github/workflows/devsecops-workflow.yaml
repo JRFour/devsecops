@@ -15,12 +15,11 @@ jobs:
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=devsecopsgithubactionsnodejsproject
-          -Dsonar.projectKey=devsecopsganodejsprojectkey
+          -Dsonar.organization=DevSecOpsActions
+          -Dsonar.projectKey=devsecopsactions
   security:
     runs-on: ubuntu-latest
     needs: build
